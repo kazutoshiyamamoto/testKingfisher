@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FE9F7E56B129F9F1089222D /* Pods_testKingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F793450D8B9024CBBEA33840 /* Pods_testKingfisher.framework */; };
 		FD07A446224657DC00A08D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD07A445224657DC00A08D50 /* AppDelegate.swift */; };
 		FD07A448224657DC00A08D50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD07A447224657DC00A08D50 /* ViewController.swift */; };
 		FD07A44B224657DC00A08D50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD07A449224657DC00A08D50 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15528703D9FEC27F9B8E202E /* Pods-testKingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testKingfisher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testKingfisher/Pods-testKingfisher.debug.xcconfig"; sourceTree = "<group>"; };
+		C598CB0D78B49B6827F32503 /* Pods-testKingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testKingfisher.release.xcconfig"; path = "Pods/Target Support Files/Pods-testKingfisher/Pods-testKingfisher.release.xcconfig"; sourceTree = "<group>"; };
+		F793450D8B9024CBBEA33840 /* Pods_testKingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testKingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD07A442224657DC00A08D50 /* testKingfisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testKingfisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD07A445224657DC00A08D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD07A447224657DC00A08D50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE9F7E56B129F9F1089222D /* Pods_testKingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A0DCE0AA4C388DF169390F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15528703D9FEC27F9B8E202E /* Pods-testKingfisher.debug.xcconfig */,
+				C598CB0D78B49B6827F32503 /* Pods-testKingfisher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF5744313F12D59600869FD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F793450D8B9024CBBEA33840 /* Pods_testKingfisher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD07A439224657DB00A08D50 = {
 			isa = PBXGroup;
 			children = (
 				FD07A444224657DC00A08D50 /* testKingfisher */,
 				FD07A443224657DC00A08D50 /* Products */,
+				4A0DCE0AA4C388DF169390F7 /* Pods */,
+				DF5744313F12D59600869FD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD07A454224657DE00A08D50 /* Build configuration list for PBXNativeTarget "testKingfisher" */;
 			buildPhases = (
+				33F43838EC157FFBFF112568 /* [CP] Check Pods Manifest.lock */,
 				FD07A43E224657DB00A08D50 /* Sources */,
 				FD07A43F224657DB00A08D50 /* Frameworks */,
 				FD07A440224657DB00A08D50 /* Resources */,
+				61905E8D2C742D9B60EA4692 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33F43838EC157FFBFF112568 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testKingfisher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61905E8D2C742D9B60EA4692 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-testKingfisher/Pods-testKingfisher-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testKingfisher/Pods-testKingfisher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD07A43E224657DB00A08D50 /* Sources */ = {
@@ -280,15 +345,13 @@
 		};
 		FD07A455224657DE00A08D50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15528703D9FEC27F9B8E202E /* Pods-testKingfisher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DJ3WL36QU;
 				INFOPLIST_FILE = testKingfisher/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.testKingfisher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -298,15 +361,13 @@
 		};
 		FD07A456224657DE00A08D50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C598CB0D78B49B6827F32503 /* Pods-testKingfisher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DJ3WL36QU;
 				INFOPLIST_FILE = testKingfisher/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.testKingfisher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
